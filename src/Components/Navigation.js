@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import {useTransition, animated} from 'react-spring'
-import { Link } from "react-router-dom";
+import NavigationMenu from './NavigationMenu'
 
 function Navigation() {
     const [showMenu, setShowMenu] = useState(false)
@@ -21,7 +21,7 @@ function Navigation() {
 
     return(
         <nav>
-            <span>
+            <span className="text-xl">
                 <FontAwesomeIcon 
                     icon = {faBars}
                     onClick={() => setShowMenu(!showMenu)}
@@ -35,7 +35,7 @@ function Navigation() {
                 <animated.div 
                     key={key} 
                     style={props}
-                    className="menu-mask"
+                    className="bg-black-t-50 fixed top-0 left-0 w-full h-full z-50"
                     onClick={() => setShowMenu(false)}
                 >
                 </animated.div>
@@ -48,24 +48,12 @@ function Navigation() {
                 <animated.div 
                     key={key} 
                     style={props}
-                    className="nav-drop-down"
+                    className="fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow p-3"
                 >
-                    <span>
-                        This is the menu.
-                    </span>
-                    <ul>
-                        <li>
-                            <Link 
-                                to="/" 
-                                className="home-label">
-                                Home
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/about" className="home-label">About</Link>
-                        </li>
-                    </ul>
-
+                
+                <NavigationMenu 
+                    closeMenu={() => setShowMenu(false)}
+                />
 
                 </animated.div>
                 )

@@ -1,14 +1,16 @@
 import React from 'react';
-import HelloWorld from './Components/HelloWorld' 
-import CounterExample from './Components/CounterExample'
-import Header from './Components/Header'
-import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import CounterExample from './Components/CounterExample'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+import Home from './Views/Home'
+import About from './Views/About'
+
 
 function App() {
   return (
@@ -16,21 +18,21 @@ function App() {
       <Router>
 
       <Header />
-
-      <HelloWorld name="Jarod"/>
-        
+      <div className="p-3">
       <Switch>
 
         <Router exact path="/">
-          <h1> This is the home page.</h1>
+          <Home />
         </Router>
 
         <Router path="/about">
-          <h1>About us. </h1>
+          <About />
         </Router>
 
       </Switch>
+      </div>
 
+      <Footer />
       </Router>
 
     </div>
