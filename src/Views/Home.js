@@ -3,11 +3,13 @@ import HelloWorld from '../Components/HelloWorld'
 
 
 function Home() {
+    let content = null
     return(
         <div>
-          <h1 className="font-bold text-2xl"> This is the home page.</h1>
-
-          <HelloWorld name="Jarod"/>
+          <h1 className="font-bold text-2xl"> 
+            Best Sellers
+          </h1>
+          {content}
         </div>
     )
 }

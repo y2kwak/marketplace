@@ -10,6 +10,7 @@ import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Home from './Views/Home'
 import About from './Views/About'
+import Product from './Views/Product'
 
 
 function App() {
@@ -21,14 +22,17 @@ function App() {
       <div className="p-3">
       <Switch>
 
-        <Router exact path="/">
+        <Route exact path="/">
           <Home />
-        </Router>
+        </Route>
 
-        <Router path="/about">
+        <Route path="/about">
           <About />
-        </Router>
-
+        </Route>
+        
+        <Route path="/products/:id">
+          <Product />
+        </Route>
       </Switch>
       </div>
 
