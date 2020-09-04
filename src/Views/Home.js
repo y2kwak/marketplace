@@ -35,7 +35,7 @@ function Home() {
     } 
 
     return(
-        <div>
+        <div className="p-10">
           <h1 className="font-bold text-2xl"> 
             Best Sellers
           </h1>

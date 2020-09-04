@@ -24,7 +24,7 @@ function Product() {
 
     if(product.data){
         content = 
-            <div>
+            <div className="p-5">
                 <h1 className="text-2xl font-bold mb-3">
                     {product.data.name}
                 </h1>

@@ -11,6 +11,7 @@ import Footer from './Components/Footer'
 import Home from './Views/Home'
 import About from './Views/About'
 import Product from './Views/Product'
+import CartPage from './Views/CartPage'
 
 
 function App() {
@@ -34,6 +35,10 @@ function App() {
           <Product />
         </Route>
       </Switch>
+
+      <Route path="/cartpage">
+          <CartPage />
+        </Route>
       </div>
 
       <Footer />
